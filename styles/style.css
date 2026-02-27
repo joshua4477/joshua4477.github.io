@@ -54,7 +54,7 @@ h1 {
 .body_box {
 	padding-left: 10px;
 	color: white;
-	background-color: black;
+	background-color: #333333;
 	border;
 	width: 100%;
 }
@@ -65,6 +65,7 @@ h1 {
 	border;
 	color: black;
 }
+
 
 
 
