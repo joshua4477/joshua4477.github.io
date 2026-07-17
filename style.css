@@ -1,0 +1,95 @@
+#pageRootStyles {
+	padding-top: 10px;
+	background-color: #332233;
+	color: blanchedalmond;
+}
+
+h2, h3, h4, h5 {
+	text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+}
+
+h1 {
+	color: #884433;
+	text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+}
+
+#navBarStyle {
+	display: flex;
+	border-bottom: solid 1px black;
+	width: 100%;
+	background-color: maroon;
+	list-style-type: none;
+	gap: 5px;
+	padding: 0;
+	margin: auto;
+}
+#innerBox {
+	padding: 5px;
+	margin: auto;
+	background-color: darkolivegreen;
+	border: solid 1px black;
+	width: 80%;
+
+	/* 1. Expand the Grid to accommodate Header and NavBar */
+	display: grid;
+	grid-template-rows: auto auto auto 1fr auto; /* Added two 'auto' rows at the start */
+	grid-template-columns: 25% 1fr;
+	grid-template-areas: 
+		"header header"       /* Row 1: Header (Spans 100%) */
+		"navbar navbar"       /* Row 2: Navigation (Spans 100%) */
+		"topbar topbar"       /* Row 3: Scroll Bar (Spans 100%) */
+		"sidebar content"     /* Row 4: Sidebar on Left, Content on Right */
+		"footer footer";      /* Row 5: Footer (Spans 100%) */
+	min-height: 100vh;
+}
+
+/* 2. Assign Header and NavBar to their new Grid Areas */
+#headerBox {
+	
+padding-top: 0px;	
+	padding-left: 20px;
+	padding-bottom: 0px;
+	background-color: #335533;
+	border-bottom: solid 1px black;
+	text-align: left;
+	text-align: top;
+	grid-area: header; /* Assign to row 1 */
+}
+
+#navBarBox {
+	border: solid 1px red;
+	text-align: center;
+	grid-area: navbar; /* Assign to row 2 */
+}
+
+#scrollBar {
+	padding: 0px;
+	margin: 0;
+	background-color: darkblue;
+	bor
+	text-align: center;
+	grid-area: topbar; /* Assign to row 3 */
+}
+
+#asideBox {
+	padding-left: 10px;
+	padding-right: 2px;
+	background-color: #335533;
+	text-align: left;
+	border-bottom: solid 8px darkolivegreen;
+	grid-area: sidebar; /* Assign to row 4, column 1 */
+}
+
+#mainContent {
+	padding-left: 20px;
+	padding-right: 20px;
+	border-top: solid 8px #335533;
+	text-align: left;
+	grid-area: content; /* Assign to row 4, column 2 */
+}
+
+#footerBox {
+	background-color: #335533;
+	text-align: center;
+	grid-area: footer; /* Assign to row 5 */
+}
